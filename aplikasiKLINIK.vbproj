@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E307F08-63B0-407F-B227-21D9D65F4E56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>aplikasiMEDICAL.My.MyApplication</StartupObject>
+    <RootNamespace>aplikasiMEDICAL</RootNamespace>
+    <AssemblyName>aplikasiMEDICAL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>aplikasiMEDICAL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>aplikasiMEDICAL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>aplikasiMEDICAL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>aplikasiMEDICAL.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CRVsPackageLib, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.TemplateEngine.13.0.4001\lib\net40\CrystalDecisions.CrystalReports.TemplateEngine.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Enterprise.Viewing.ReportSource.13.0.4001\lib\net40\CrystalDecisions.Enterprise.Viewing.ReportSource.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.2.6\lib\net45\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net45\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net45\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.29\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="aplikasiMEDICAL" />
+    <Import Include="aplikasiMEDICAL.aksesData" />
+    <Import Include="aplikasiMEDICAL.My" />
+    <Import Include="aplikasiMEDICAL.My.Resources" />
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="CrystalDecisions.CrystalReports.ViewerObjectModel" />
+    <Import Include="CrystalDecisions.Enterprise" />
+    <Import Include="CrystalDecisions.Enterprise.Viewing" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql" />
+    <Import Include="MySql.Data" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="MySql.Data.MySqlClient.Properties" />
+    <Import Include="MySql.Data.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aksesData\aksesMedical.vb" />
+    <Compile Include="aplikasi\FormAbout.designer.vb">
+      <DependentUpon>FormAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormAboutProgram.designer.vb">
+      <DependentUpon>FormAboutProgram.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormAboutProgram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormBantuanProgram.designer.vb">
+      <DependentUpon>FormBantuanProgram.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormBantuanProgram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormCariDokter.designer.vb">
+      <DependentUpon>FormCariDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormCariDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDaftarDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDaftarObat.designer.vb">
+      <DependentUpon>FormDaftarObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormDaftarObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDaftarPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDemo.designer.vb">
+      <DependentUpon>FormDemo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormDemo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDiagnosa.designer.vb">
+      <DependentUpon>FormDiagnosa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormDiagnosa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDiagnosaPasien.designer.vb">
+      <DependentUpon>FormDiagnosaPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormDiagnosaPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormDokter.designer.vb">
+      <DependentUpon>FormDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormLogin.designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormObat.designer.vb">
+      <DependentUpon>FormObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormPasien.designer.vb">
+      <DependentUpon>FormPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormPegawai.designer.vb">
+      <DependentUpon>FormPegawai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormPegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormSplashScreen.designer.vb">
+      <DependentUpon>FormSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\FormUser.designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikasi\MenuMedical.designer.vb">
+      <DependentUpon>MenuMedical.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikasi\MenuMedical.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modul\modDiagnosa.vb" />
+    <Compile Include="modul\modDokter.vb" />
+    <Compile Include="modul\modLogin.vb" />
+    <Compile Include="modul\modMenu.vb" />
+    <Compile Include="modul\modObat.vb" />
+    <Compile Include="modul\modPasien.vb" />
+    <Compile Include="modul\modPegawai.vb" />
+    <Compile Include="modul\modUser.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aplikasi\FormAbout.resx">
+      <DependentUpon>FormAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormAboutProgram.resx">
+      <DependentUpon>FormAboutProgram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormBantuanProgram.resx">
+      <DependentUpon>FormBantuanProgram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormCariDokter.resx">
+      <DependentUpon>FormCariDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDaftarDokter.resx">
+      <DependentUpon>FormDaftarDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDaftarObat.resx">
+      <DependentUpon>FormDaftarObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDaftarPasien.resx">
+      <DependentUpon>FormDaftarPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDemo.resx">
+      <DependentUpon>FormDemo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDiagnosa.resx">
+      <DependentUpon>FormDiagnosa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDiagnosaPasien.resx">
+      <DependentUpon>FormDiagnosaPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormDokter.resx">
+      <DependentUpon>FormDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormObat.resx">
+      <DependentUpon>FormObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormPasien.resx">
+      <DependentUpon>FormPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormPegawai.resx">
+      <DependentUpon>FormPegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormSplashScreen.resx">
+      <DependentUpon>FormSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikasi\MenuMedical.resx">
+      <DependentUpon>MenuMedical.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
+    <Folder Include="laporan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
