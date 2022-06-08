@@ -1,1 +1,1 @@
-Jangan Lupa Install Visual Studio 2022, install semua package yang diminta IDE di NuGet Package Manager (seperti MySQL, crsytal report, dll.). Install pula SAP Crystal Report for Visual Studio dan MySQL connector for .NET framework. .NET Framework yang digunakan minimal 4.5
+Jangan Lupa Install Visual Studio 2022, install semua package yang diminta IDE di NuGet Package Manager (seperti MySQL/PHPMyAdmin di XAMPP, crsytal report, dll.). Install pula SAP Crystal Report for Visual Studio dan MySQL connector for .NET framework. .NET Framework yang digunakan minimal 4.5
